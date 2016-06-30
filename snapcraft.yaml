@@ -9,28 +9,16 @@ apps:
   nitrokey-app:
     command: qt5-launch usr/local/bin/nitrokey-app
     plugs:
-      - gsettings
-      - mount-observe
-      - system-observe
-      - x11
       - unity7
       - home
   direct:
     command: usr/local/bin/nitrokey-app
     plugs:
-      - gsettings
-      - mount-observe
-      - system-observe
-      - x11
       - unity7
       - home
   qt-launch:
     command: qt5-launch usr/local/bin/nitrokey-app
     plugs:
-      - gsettings
-      - mount-observe
-      - system-observe
-      - x11
       - unity7
       - home
   no-plugs:
@@ -55,7 +43,7 @@ parts:
       - libnotify-dev
       - qt5-default
       #- libxcb1
-      - gtk2-engines-murrine 
       - overlay-scrollbar-gtk2
-      - unity-gtk2-module
+      #- unity-gtk-module-autopilot
+      - unity-gtk-module-common
     after: [qt5conf] # A wiki part
