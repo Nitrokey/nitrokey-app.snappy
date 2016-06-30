@@ -1,0 +1,61 @@
+name: nitrokey-app
+version: 0.1
+summary: Nitrokey Application
+description: A QT GUI for managing your Nitrokey device
+#confinement: strict
+confinement: devmode
+
+apps:
+  nitrokey-app:
+    command: qt5-launch usr/local/bin/nitrokey-app
+    plugs:
+      - gsettings
+      - mount-observe
+      - system-observe
+      - x11
+      - unity7
+      - home
+  direct:
+    command: usr/local/bin/nitrokey-app
+    plugs:
+      - gsettings
+      - mount-observe
+      - system-observe
+      - x11
+      - unity7
+      - home
+  qt-launch:
+    command: qt5-launch usr/local/bin/nitrokey-app
+    plugs:
+      - gsettings
+      - mount-observe
+      - system-observe
+      - x11
+      - unity7
+      - home
+  no-plugs:
+    command: qt5-launch usr/local/bin/nitrokey-app
+
+parts:
+  application:
+    plugin: qmake
+    qt-version: qt5
+    source: git://github.com/Nitrokey/nitrokey-app.git
+    stage-packages:
+      # Here for the plugins-- they're not linked in automatically.
+      - libqt5gui5
+      #- libqt5dbus5
+      #- libqt5core5a
+      # Here to make the menus work.
+      - libgtk2.0-0
+      # Another dependencies
+      - libusb-1.0-0-dev
+      - libgtk2.0-dev
+      #- libappindicator-dev
+      - libnotify-dev
+      - qt5-default
+      #- libxcb1
+      - gtk2-engines-murrine 
+      - overlay-scrollbar-gtk2
+      - unity-gtk2-module
+    after: [qt5conf] # A wiki part
