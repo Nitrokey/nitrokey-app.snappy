@@ -7,22 +7,27 @@ confinement: devmode
 
 apps:
   nitrokey-app:
-    command: qt5-launch usr/local/bin/nitrokey-app
+    command: qt5-launch usr/local/bin/nitrokey-app -style fusion 2>/dev/null >/dev/null
+    plugs:
+      - unity7
+      - home
+  dev:
+    command: qt5-launch usr/local/bin/nitrokey-app -style fusion
     plugs:
       - unity7
       - home
   direct:
-    command: usr/local/bin/nitrokey-app
+    command: usr/local/bin/nitrokey-app -style fusion
     plugs:
       - unity7
       - home
   qt-launch:
-    command: qt5-launch usr/local/bin/nitrokey-app
+    command: qt5-launch usr/local/bin/nitrokey-app -style fusion
     plugs:
       - unity7
       - home
   no-plugs:
-    command: qt5-launch usr/local/bin/nitrokey-app
+    command: qt5-launch usr/local/bin/nitrokey-app -style fusion
 
 parts:
   application:
