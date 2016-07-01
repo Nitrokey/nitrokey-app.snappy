@@ -37,18 +37,18 @@ parts:
     stage-packages:
       # Here for the plugins-- they're not linked in automatically.
       - libqt5gui5
-      #- libqt5dbus5
-      #- libqt5core5a
+      - libqt5dbus5
+      - libqt5core5a
       # Here to make the menus work.
       - libgtk2.0-0
       # Another dependencies
-      - libusb-1.0-0-dev
-      - libgtk2.0-dev
+      #- libusb-1.0-0-dev
+      #- libgtk2.0-dev
       #- libappindicator-dev
-      - libnotify-dev
-      - qt5-default
+      #- libnotify-dev
+      # - qt5-default
       #- libxcb1
-      - overlay-scrollbar-gtk2
+      #- overlay-scrollbar-gtk2
       #- unity-gtk-module-autopilot
-      - unity-gtk-module-common
+      #- unity-gtk-module-common
     after: [qt5conf] # A wiki part
