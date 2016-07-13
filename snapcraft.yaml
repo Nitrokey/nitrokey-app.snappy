@@ -1,5 +1,5 @@
 name: nitrokey-app
-version: 0.2
+version: 0.4snap1
 summary: Nitrokey Application
 description: A QT GUI for managing your Nitrokey device
 confinement: strict
