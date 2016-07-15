@@ -57,9 +57,9 @@ Most important as of 20160715:
 Warnings
 =========
 Some warnings are displayed during application execution:
-`
+```
 XmbTextListToTextProperty result code -2
 XmbTextListToTextProperty result code -2
 XmbTextListToTextProperty result code -2
-`
+```
 They are muted with standard `nitrokey-app` call. Cause is not yet known. Application seems to work properly nevertheless.
