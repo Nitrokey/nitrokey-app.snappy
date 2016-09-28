@@ -18,7 +18,7 @@ For developers
 
 To run application please use `nitrokey-app.dev` after standard installation.
 
-To build package simply execute:
+To build package simply execute (please update the system beforehand, especially snappy family packages):
 
 ```
 snapcraft update
@@ -33,10 +33,11 @@ sudo snap install nitrokey-app*snap
 
 It can be later sent to Ubuntu App store:
 ```
-snap login email@email.com
-snap upload nitrokey*snap
+snapcraft login email@email.com # email from the Ubuntu App's account
+snapcraft push nitrok*snap # note revision number
+snapcraft release nitrokey-app <current revision>  stable
 ```
-Please remember to set proper application version in snapcraft.yaml.
+Please remember to set proper application version in snapcraft.yaml. Since Snappy is under heavy development it is possible some changes would have to be made in snapcraft.yaml.
 
 In case snapd would lock and could not remove application (aka Snap uninstallation process fails):
 [solution](http://askubuntu.com/questions/765778/snap-uninstallation-process-fails)
