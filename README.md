@@ -28,7 +28,7 @@ Snappy will download latest sources from git repository and all dependences of a
 Then a snap package will be created in the root directory. It can be installed with:
 
 ```
-sudo snap install nitrokey-app*snap
+sudo snap install nitrokey-app*snap --force-dangerous --devmode
 ```
 
 It can be later sent to Ubuntu App store:
@@ -49,7 +49,7 @@ Known issues:
 Current issues list could be found under [issues page](https://github.com/Nitrokey/nitrokey-app.snappy/issues).
 
 Most important as of 20160715:
-- A tray icon could not be shown (snappy platform issue)
+- A tray icon could not be shown (snappy platform issue) (update 20161129: should be fixed within a month)
 - Could not install package without `--devmode`(no available interface for device talk)
 - Not working with encrypted home: `failed to create user data directory. errmsg: Permission denied` -
     please check [solution](https://bugs.launchpad.net/ubuntu/+source/snapd/+bug/1592696/comments/8)
