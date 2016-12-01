@@ -1,6 +1,6 @@
 name: nitrokey-app
 # version format: <app version>snap<snapcraft.yaml major revision>
-version: 0.5.1snap1
+version: 0.6.1snap1
 summary: Nitrokey Application
 description: A QT GUI for managing your Nitrokey device
 confinement: strict
