@@ -8,7 +8,7 @@ For users
 =====
 To install Nitrokey Application through snappy service please run command:
 ```
-sudo snappy install nitrokey-app --devmode
+sudo snap install nitrokey-app --devmode
 ```
 Please notice `--devmode` switch. Without it application cannot communicate with USB devices.
 After that application could be run with `nitrokey-app`.
