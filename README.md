@@ -12,6 +12,11 @@ sudo snap install nitrokey-app --devmode
 ```
 Please notice `--devmode` switch. Without it application cannot communicate with USB devices.
 After that application could be run with `nitrokey-app`.
+If you wish to use Beta or Nightly versions please add `--beta` or `--edge` switch respectively.
+In case you have already installed application from other source and it covers Snap path, you can use Snap directly to run the application:
+```
+snap run nitrokey-app 
+```
 
 For developers
 ========
@@ -37,6 +42,7 @@ snapcraft login email@email.com # email from the Ubuntu App's account
 snapcraft push nitrok*snap # note revision number
 snapcraft release nitrokey-app <current revision>  stable
 ```
+Use `edge` for test builds and `beta` for builds destined to be tested by users.
 Please remember to set proper application version in snapcraft.yaml. Since Snappy is under heavy development it is possible some changes would have to be made in snapcraft.yaml.
 
 In case snapd would lock and could not remove application (aka Snap uninstallation process fails):
