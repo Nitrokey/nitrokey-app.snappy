@@ -54,19 +54,13 @@ Known issues:
 
 Current issues list could be found under [issues page](https://github.com/Nitrokey/nitrokey-app.snappy/issues).
 
-Most important as of 20160715:
-- A tray icon could not be shown (snappy platform issue) (update 20161129: should be fixed within a month)
-- Could not install package without `--devmode`(no available interface for device talk)
-- Not working with encrypted home: `failed to create user data directory. errmsg: Permission denied` -
-    please check [solution](https://bugs.launchpad.net/ubuntu/+source/snapd/+bug/1592696/comments/8)
-    and [solution 2](https://bugs.launchpad.net/ubuntu/+source/snapd/+bug/1592696/comments/7)
+Most important as of 2018-04-11:
+- Could not install package without `--devmode`
 
 Warnings
 =========
-Some warnings are displayed during application execution:
+A warning is displayed during application execution:
 ```
-XmbTextListToTextProperty result code -2
-XmbTextListToTextProperty result code -2
-XmbTextListToTextProperty result code -2
+Qt: Session management error: None of the authentication protocols specified are supported
 ```
-They are muted with standard `nitrokey-app` call. Cause is not yet known. Application seems to work properly nevertheless.
+Cause is not yet known. Application seems to work properly nevertheless.
