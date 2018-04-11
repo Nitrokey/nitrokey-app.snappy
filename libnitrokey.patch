@@ -1,0 +1,13 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 6487e5d..073e7fd 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -135,7 +135,7 @@ IF(NOT WIN32)
+     ENDIF()
+ 
+     install(FILES
+-            ${CMAKE_SOURCE_DIR}/data/41-nitrokey.rules
++            ${CMAKE_CURRENT_SOURCE_DIR}/data/41-nitrokey.rules
+             DESTINATION ${CMAKE_INSTALL_UDEVRULESDIR}
+     )
+ ENDIF()
