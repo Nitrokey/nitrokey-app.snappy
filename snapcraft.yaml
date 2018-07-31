@@ -1,6 +1,6 @@
 name: nitrokey-app
 # version format: <app version>snap<snapcraft.yaml major revision>
-version: 1.3.1snap3
+version: 1.3.1snap3-2
 summary: Nitrokey Application
 description: A QT GUI for managing your Nitrokey device
 confinement: strict
@@ -42,6 +42,7 @@ parts:
     source-branch: v1.3.1
     stage-packages:
       # Here for the plugins-- they're not linked in automatically.
+      - libc6
       - libqt5gui5
       - libqt5svg5
       - libhidapi-libusb0
