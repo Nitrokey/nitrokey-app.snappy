@@ -1,11 +1,13 @@
 name: nitrokey-app
 # version format: <app version>snap<snapcraft.yaml major revision>
-version: 1.4.0snap4
+version: 1.4.2snap5
 summary: Nitrokey Application
 description: A QT GUI for managing your Nitrokey device
 confinement: strict
 #confinement: devmode
 grade: stable
+base: core18
+
 
 apps:
   nitrokey-app:
@@ -39,7 +41,7 @@ parts:
         - -usr/lib/x86_64-linux-gnu/libLLVM-3.8.so.1
           #- -usr/lib/x86_64-linux-gnu/dri/ #5MB less, but with DRI errors, not needed probably but lets leave it for now
         - -usr/lib/x86_64-linux-gnu/libQt5Network.so.5.5.1
-    source-branch: v1.4
+    source-branch: v1.4.2
     stage-packages:
       # Here for the plugins-- they're not linked in automatically.
       - libqt5gui5
